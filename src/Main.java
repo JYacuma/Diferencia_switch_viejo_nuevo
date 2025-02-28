@@ -8,36 +8,18 @@ public class Main {
 
         int dia = 3;
 
-        String nombreDelDia;
+        String nombreDelDia = switch (dia) {
+            case 1 -> "Lunes";
+            case 2 -> "Martes";
+            case 3 -> "Miércoles";
+            case 4 -> "Jueves";
+            case 5 -> "Viernes";
+            case 6 -> "Sábado";
+            case 7 -> "Domingo";
+            default -> "Día inválido";
+        };
 
-        switch (dia) {
-                case 1:
-                    nombreDelDia = "Lunes";
-                    break;
-                case 2:
-                    nombreDelDia = "Martes";
-                    break;
-                case 3:
-                    nombreDelDia = "Miércoles";
-                    break;
-                case 4:
-                    nombreDelDia = "Jueves";
-                    break;
-                case 5:
-                    nombreDelDia = "Viernes";
-                    break;
-                case 6:
-                    nombreDelDia = "Sábado";
-                    break;
-                case 7:
-                    nombreDelDia = "Domingo";
-                    break;
-                default:
-                    nombreDelDia = "Día inválido";
-                    break;
-            }
-
-            System.out.println("El día es: " + nombreDelDia);
+        System.out.println("El día es: " + nombreDelDia);
 
 
     }
